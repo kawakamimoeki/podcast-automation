@@ -6,7 +6,7 @@ require "active_support/core_ext"
 
 class Podcast < Thor
   desc "deploy", "deploy"
-  def deploy(number, title, author, description, asset_dir, md_dir)
+  def deploy(number, title, author, description, asset_dir, md_dir, gcs_bucket)
     artwork = File.join(asset_dir, "artwork.jpg")
     mp3 = File.join(asset_dir, "ep#{number}.mp3")
     wav = File.join(asset_dir, "ep#{number}.wav")
@@ -22,7 +22,7 @@ class Podcast < Thor
       ERB.new(File.read(File.join(md_dir, "_.md.erb"))).result(binding)
     )
 
-    `gsutil cp #{mp3} gs://nekotobit-episodes/`
+    `gsutil cp #{mp3} gs://#{gcs_bucket}/`
   end
 end
 
