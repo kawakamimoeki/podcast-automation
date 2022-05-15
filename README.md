@@ -1,4 +1,4 @@
-# Podcast Deployer
+# Podcast Automation
 
 `config.yml`:
 
@@ -14,5 +14,5 @@ episode:
 ```
 
 ```shell
-bundle exec rake deploy
+bundle exec rake podcast
 ```

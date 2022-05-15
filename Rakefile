@@ -4,7 +4,7 @@ require "erb"
 require "active_support"
 require "active_support/core_ext"
 
-task :deploy do
+task :podcast do
   config = YAML.load_file("config.yml")
   project_dir = config["project_dir"]
   markdown_dir = config["markdown_dir"]
