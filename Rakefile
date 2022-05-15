@@ -23,6 +23,8 @@ task :deploy do
 
   `lame --tt #{title} --ta #{author} --ty #{Date.today.year} --ti #{artwork} --noreplaygain -q 2 --cbr -b 64 -m m --resample 44.1 --add-id3v2 #{wav} #{mp3}`
 
+  `mp3gain -r #{mp3}`
+
   date = Time.current.beginning_of_week(:wednesday).since(1.week).strftime("%Y-%m-%d")
   filesize = File.size(mp3)
   duration = Time.at(Mp3Info.open(mp3).length).utc.strftime("%H:%M:%S")
