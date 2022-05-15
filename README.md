@@ -1,5 +1,18 @@
 # Podcast Deployer
 
+`config.yml`:
+
 ```
-bundle exec ruby podcast.rb deploy <number> <title> <author> <description> <asset_dir> <md_dir>
+project_dir: でぃれくとり
+markdown_dir: でぃれくとり
+gcs_bucket: ばけっと
+episode:
+  number: 1
+  title: たいとる
+  author: なまえ
+  description: せつめい
+```
+
+```
+bundle exec rake deploy
 ```

@@ -4,6 +4,6 @@ source "https://rubygems.org"
 
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
-gem "thor"
+gem "rake"
 gem "ruby-mp3info"
 gem "activesupport"
