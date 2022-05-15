@@ -2,7 +2,7 @@
 
 `config.yml`:
 
-```
+```yaml
 project_dir: でぃれくとり
 markdown_dir: でぃれくとり
 gcs_bucket: ばけっと
@@ -13,6 +13,6 @@ episode:
   description: せつめい
 ```
 
-```
+```shell
 bundle exec rake deploy
 ```
