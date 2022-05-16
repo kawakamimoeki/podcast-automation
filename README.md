@@ -10,6 +10,7 @@ episode:
   number: 1
   title: たいとる
   author: なまえ
+  album: あるばむ
   description: せつめい
 ```
 
